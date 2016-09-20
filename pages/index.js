@@ -22,10 +22,10 @@ export default class Index extends React.Component {
                 <Link to={prefixLink(config.gettingStartedLink)}>Get started</Link>
               </div>
               <div className="install">
-                npm i -g waigo
+                git clone https://github.com/geoavalanche/geoavalanche-client<br />docker-compose up
               </div>
               <div className="meta">
-                <a className="changelog" href="https://github.com/waigo/waigo/blob/master/CHANGELOG.md" title="View release notes for current version">
+                <a className="changelog" href="https://github.com/geoavalanche/geoavalanche-server/blob/master/CHANGELOG.md" title="View release notes for current version">
                   <i className="changelog" /><span>Changelog</span>
                 </a>
                 <a className="twitter" href={config.twitterUrl} title="Follow us on twitter">
@@ -40,33 +40,33 @@ export default class Index extends React.Component {
               </div>
             </section>
             <section className="features-1">
-              <p className="intro">Build data-driven APIs, apps and reactive websites.<br />Uses Koa and RethinkDB.</p>
+              <p className="intro">Build EO-driven APIs, geoprocessing and reactive maps.<br />Uses OpenLayers and GeoServer.</p>
               <ul className="features">
                 <li>
-                  <div className="title">Koa and RethinkDB</div>
+                  <div className="title">OGC Standards</div>
                   <div className="description">
-                    Waigo builds on Koa, the ES6-based spiritual successor to Express.
-                    Elegantly compose complex middleware patterns.
-                    Use RethinkDB to build fully <strong>end-to-end
-                    reactive applications</strong>.
+                    GeoAvalanche builds on GeoServer, the geospatial OGC-compliant middleware.
+                    Elegantly compose complex Earth Observation geoprocessing patterns.
+                    Use OpenLayers to build fully <strong>end-to-end
+                    reactive web mapping applications</strong>.
                   </div>
                 </li>
                 <li>
                   <div className="title">Plugin architecture</div>
                   <div className="description">
                     Extend or override any part of the core framework as you
-                    see fit. Only use what you need. Publish your
-                    customizations as plugins (NPM modules) to re-use across
-                    your other Waigo projects.
+                    want to add your custom EO process. Only use what you need. Publish your
+                    customizations as plugins (GeoServer modules) to re-use across
+                    your other snow avalanche projects.
                   </div>
                 </li>
                 <li>
-                  <div className="title">Form handling</div>
+                  <div className="title">OGC WPS processing</div>
                   <div className="description">
-                    Declaratively build
-                    forms with automatic sanitization and validation. Initialize
-                    and submit forms from any part of your application. Output a
-                    form's configuration as JSON. CSRF-prevention comes built-in.
+                    Fine-grained data processing for Terrain Analysis, Snowpack,
+                    and historical incidents. Consume Web Processing Services for
+                    SWE time-series, Slope, Aspect, Curvature and historical occurrence
+                    of incidents in the neighbourhood of a certain location.
                   </div>
                 </li>
                 <li>
@@ -122,7 +122,7 @@ export default class Index extends React.Component {
                   <div className="description">
                     Create and run a skeleton app in seconds using the command-line client.
                     Generate gulp scripts to enable live-reload in the browser during development.
-                    Install the <Link to="https://github.com/waigo/admin">Admin interface</Link> for
+                    Install the <Link to="https://github.com/geoavalanche/admin">Admin interface</Link> for
                     easy data management.
                   </div>
                 </li>
@@ -130,22 +130,20 @@ export default class Index extends React.Component {
             </section>
             <section className="quick-start">
               <div className="wrapper">
-                <h2>Quick start</h2>
-                <pre>{`$ npm init
-$ waigo init
-$ waigo init-gulp
-$ gulp`}
+                <h2>Quick start for developers</h2>
+                <pre>{`$ npm install
+$ npm run dev`}
                 </pre>
                 <div>
                   <p>Visit <Link to="http://localhost:3000 ">http://localhost:3000</Link> in your browser to see it. </p>
-                  <p>Now start editing files and the browser page will auto-reload!</p>
+                  <p>Now enter your preferred location and search for the avalanche risk!</p>
                 </div>
               </div>
             </section>
             <section className="next-links">
               <div>
                 <Link to={prefixLink(config.docsLink)}>Read the docs &raquo;</Link>
-                <p>Get an in-depth introduction to Waigo and how to use it.</p>
+                <p>Get an in-depth introduction to GeoAvalanche and how to use it.</p>
               </div>
               <div>
                 <a href={config.githubUrl}>View the code &raquo;</a>

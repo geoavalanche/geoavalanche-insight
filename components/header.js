@@ -9,6 +9,12 @@ import Classnames from 'classnames';
 
 const NAV = [
   {
+    label: 'Map',
+    title: 'Avalanche risk insight',
+    link: prefixLink(config.mapLink),
+    tag: 'map',
+  },
+  {
     label: 'Guide',
     title: 'Documentation guide',
     link: prefixLink(config.docsLink),
@@ -93,7 +99,7 @@ export default class Header extends React.Component {
         <header>
           <section className="brand">
             <Link to={prefixLink('/')}>
-              Waigo.js
+              GeoAvalanche
             </Link>
           </section>
           <button 
