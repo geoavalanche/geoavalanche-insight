@@ -26,8 +26,8 @@ export default class MapTemplate extends React.Component {
       <DocumentTitle title={`${page.data.title} | ${config.siteTitle}`}>
         <div className="page map">
           <Header activeNav="Map" />
+          <div id="map"></div>
           <TheApp />
-          <div id="map" className="map"></div>
           <Footer />
         </div>
       </DocumentTitle>

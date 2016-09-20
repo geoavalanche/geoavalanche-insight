@@ -176,8 +176,11 @@ var vector = new ol.layer.Vector({
     style: vectorStyleFunction
 });
 
+var theTarget = document.getElementById('map');
+console.log("theTarget", theTarget);
+
 var map = new ol.Map({
-  target: 'map',
+  target: theTarget,
   layers: [
     new ol.layer.Tile({
       source: new ol.source.OSM()
@@ -476,7 +479,6 @@ var TheApp = React.createClass({
       <Button onClick={this.drawPoint}>Draw a point on the map</Button>
       <GPXUpload onSelectFile={onSelectFile} />
       <MapzenSearchAddress url={config.mapzen.url} onSelectAddress={onSelectAddress} />
-      <div id="map" className="map"></div>
       </form>
       </div>
     );
