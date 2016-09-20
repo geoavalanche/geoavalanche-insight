@@ -27,6 +27,7 @@ export default class MapTemplate extends React.Component {
         <div className="page map">
           <Header activeNav="Map" />
           <TheApp />
+          <div id="map" className="map"></div>
           <Footer />
         </div>
       </DocumentTitle>

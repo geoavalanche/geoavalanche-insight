@@ -476,6 +476,7 @@ var TheApp = React.createClass({
       <Button onClick={this.drawPoint}>Draw a point on the map</Button>
       <GPXUpload onSelectFile={onSelectFile} />
       <MapzenSearchAddress url={config.mapzen.url} onSelectAddress={onSelectAddress} />
+      <div id="map" className="map"></div>
       </form>
       </div>
     );
