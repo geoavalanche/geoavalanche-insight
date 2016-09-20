@@ -1,4 +1,4 @@
-# Waigo.js documentation website
+# GeoAvalanche documentation website
 
 Built using [gatsby](https://github.com/gatsbyjs/gatsby).
 
