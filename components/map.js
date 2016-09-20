@@ -483,8 +483,6 @@ var TheApp = React.createClass({
 });
 
 
-ReactDOM.render(<TheApp />, document.getElementById('content'));
+//ReactDOM.render(<TheApp />, document.getElementById('content'));
 
-module.exports = {
-  TheApp : TheApp
-}
+module.exports = TheApp;

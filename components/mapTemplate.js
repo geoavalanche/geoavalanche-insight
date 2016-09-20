@@ -10,7 +10,7 @@ import UrlUtils from '../utils/url';
 import NavUtils from '../utils/nav';
 import Header from './header';
 import Footer from './footer';
-//import Map from './map';
+import TheApp from './map';
 //const contentMap = require('./map.js').TheApp
 
 const NAV = require('../data/mapNav.json'),
@@ -26,9 +26,7 @@ export default class MapTemplate extends React.Component {
       <DocumentTitle title={`${page.data.title} | ${config.siteTitle}`}>
         <div className="page map">
           <Header activeNav="Map" />
-            {content}
-            //<div id="content">jhfjkhjfkhdshfjk</div>
-            //<div id="map" className="map"></div>
+          <TheApp />
           <Footer />
         </div>
       </DocumentTitle>
