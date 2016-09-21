@@ -176,11 +176,8 @@ var vector = new ol.layer.Vector({
     style: vectorStyleFunction
 });
 
-var theTarget = document.getElementById('map');
-console.log("theTarget", theTarget);
-
 var map = new ol.Map({
-  target: theTarget,
+  //target: 'map',
   layers: [
     new ol.layer.Tile({
       source: new ol.source.OSM()
@@ -467,6 +464,12 @@ var TheApp = React.createClass({
     if (window.console) console.log("TheApp.drawPoint() ... done");
   },
 
+  componentDidMount: function() {
+    if (window.console) console.log("TheApp.componentDidMount()");
+    var theTarget = document.getElementById('map');
+    console.log("theTarget", theTarget);  
+    map.setTarget(theTarget);  
+  },
 
   render: function() {
     if (window.console) console.log("TheApp.render()");
@@ -480,6 +483,7 @@ var TheApp = React.createClass({
       <GPXUpload onSelectFile={onSelectFile} />
       <MapzenSearchAddress url={config.mapzen.url} onSelectAddress={onSelectAddress} />
       </form>
+      <div id="map"></div>
       </div>
     );
   }
